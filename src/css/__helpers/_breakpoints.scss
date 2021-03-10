@@ -1,0 +1,43 @@
+//
+// ----------------------------------------
+// BREAKPOINTS
+//
+
+$breakpoints: (sm: 576px, md: 768px, lg: 1080px, xl: 1240px);
+
+body::before {
+	content: '#{$breakpoints}';
+	display: none; }
+
+// How it works?
+//
+// $breakpoints is variable for include-media mixins http://include-media.com/
+// They are loaded by default from __vendors/_include-media.scss
+//
+// You can name breakpoint as you want. You can also add as many breakpoints you need.
+// For example you can define such breakpoints:
+//
+// > $breakpoints: (xs: 320px, sm: 768px, md: 1024px, lg: 1200px, xl: 1400px);
+//
+// Then, you can include them:
+//
+// > @include media('>=sm') { /* CSS code here */ }
+//
+// It gonna compile it to:
+//
+// > @media (min-width: 768px) { /* CSS code here */ }
+//
+// Default set of breakpoints are inspired by Bootstrap 4 breakpoints:
+// https://v4-alpha.getbootstrap.com/layout/grid/#grid-options
+//
+// Important! When you declare media higher than a breakpoint, do it with equal sign like:
+//
+// > @include media('>=lg') { /* CSS code here */ }
+//
+// When you declare media lower than a breakpoint, do it without equal sign like:
+//
+// > @include media('<lg') { /* CSS code here */ }
+//
+// Of course more appreciated is declaring only >= values, mobile first.
+//
+// Breakpoints are deliver to js/__constants/breakpoints.js in body::before pseudoelement

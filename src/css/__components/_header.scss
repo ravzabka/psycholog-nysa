@@ -1,0 +1,61 @@
+.header {
+
+	padding-top: 15px;
+	
+
+	&__title {
+
+		font-family: $font--headline;
+		font-size: 1em;
+		margin-bottom: 10px;
+
+		@include media('>=sm') { 
+			font-size: 24px;
+		}
+	}
+
+	&__image {
+
+		width: 50px;
+		display: flex;
+		margin-right: 10px;
+
+	}
+	&__logo {
+
+		width: 100%;
+		text-align: center;
+
+		@include media('>=lg') { width: auto;}
+  
+	}
+
+	&__logo-container {
+
+		display: flex;
+		align-items: flex-end;
+
+		&:hover {
+
+			text-decoration: none;
+			color: inherit;
+		}
+	}
+
+	&__container {
+
+		display: flex;
+		flex-wrap: wrap;
+		
+
+	}
+
+	&__break {
+
+		@include media('>=sm') { 
+			display: none;
+
+		}		
+	}
+		
+}

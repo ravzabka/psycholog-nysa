@@ -1,0 +1,74 @@
+//
+// ----------------------------------------
+// COLORS
+//
+// Colors in variables.
+// Basically we have X brand colors:
+// - brand main (e.g. orange)
+// - brand secondary (e.g. blue)
+//
+// We have also X grey tones:
+// - dark grey
+// - light grey
+//
+// And of course:
+// - black
+// - white
+//
+
+$color--dark: #1c1d17;
+$color--grey-light:  #fafafa;
+$color--grey:  #f2f2f2;
+$color--green: #68a12f;
+$color--green-dark: #47792f;
+$color--green-light: #91c020;
+
+$color--black: #000000;
+$color--white: #ffffff;
+
+.color {
+
+	&--black {
+
+		color: $color--black;
+	}
+
+	&--white {
+
+		color: $color--white;
+	}
+
+	&--green {
+
+		color: $color--green;
+	}
+
+	
+	
+}
+.bg {
+
+	&--black {
+
+		background-color: $color--black;
+	}
+
+	&--white {
+
+		background-color: $color--white;
+	}
+
+	&--grey-light {
+
+		background-color: $color--grey-light;
+
+	}
+
+	&--dark {
+
+		background-color: $color--dark;
+
+
+	}
+	
+}

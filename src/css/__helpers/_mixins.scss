@@ -1,0 +1,39 @@
+//
+// ----------------------------------------
+// MIXINS
+//
+
+// ----------------------------------------
+// Transitions
+
+@mixin transition($props: all, $speed: 0.1s, $easing: linear) { transition: $props $speed $easing; }
+
+// How to use?
+// If you want to add transition for color just:
+//
+// > @include transition(color);
+
+// ----------------------------------------
+// Image sources
+
+@function brand($name) {
+	$imagePath: '../img/brandmarks/';
+	@return url(#{$imagePath}#{$name}); }
+
+@function icon($name) {
+	$imagePath: '../img/icons/';
+	@return url(#{$imagePath}#{$name}); }
+
+@function pic($name) {
+	$imagePath: '../img/pics/';
+	@return url(#{$imagePath}#{$name}); }
+
+// How to use?
+// We keep all our images by default in "img" folder. Inside it we group images in brandmarks, icons and pics folders.
+// These mixins are for quicker access for the images. We don't need to write:
+//
+// > background-image: url('../img/icons/twitter.svg');
+//
+// We can do it simpler:
+//
+// > background-image: icon('twitter.svg');

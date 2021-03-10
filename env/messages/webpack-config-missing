@@ -1,0 +1,6 @@
+[red] Error!
+Webpack configuration file is missing!
+You should have following file in your project root:
+[blue] webpack.config.js
+
+It is missing. Try running "node setup" to generate it.

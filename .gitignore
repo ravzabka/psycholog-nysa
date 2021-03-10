@@ -1,0 +1,43 @@
+# No local configuration
+.env
+
+# No composer executable
+/composer.phar
+
+# No components/libraries
+/node_modules
+/vendor
+
+# No temporary files
+/.tmp
+
+# No local configuration
+/config/local.json
+
+# No compiled project
+/web
+
+# No OS-specific garbage
+*~
+.DS_Store
+Thumbs.db
+thumbs.db
+
+# No PhpStorm user configuration
+
+## User-specific stuff:
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/terminal.xml
+
+## Sensitive or high-churn files:
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+
+## Gradle:
+.idea/gradle.xml
+.idea/libraries

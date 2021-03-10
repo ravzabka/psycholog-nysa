@@ -1,0 +1,42 @@
+.list-unordered {
+
+	& li {		
+       
+        margin-left: 1em;
+        line-height: 1.4; 
+        position: relative;
+        margin-bottom: .5em;
+
+        &::before {
+            
+            position: absolute;
+            top: 8px;
+            left: 0;
+            display: inline-block;           
+            margin-left: -1em;
+            content: '';  
+		    width: 5px;
+		    height: 5px;
+		   	border-radius: 7.5px;
+		    background-color: $color--green;
+        } 
+	}
+}
+
+.list-ordered {
+
+    counter-reset: my-awesome-counter;
+    list-style: none;
+    padding-left: 40px;
+
+    & li {      
+       
+        margin: 0 0 0.5rem 0;
+        counter-increment: my-awesome-counter;
+        position: relative;   
+        
+        
+
+       
+    }
+}

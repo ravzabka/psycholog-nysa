@@ -1,0 +1,102 @@
+<html>
+<head>
+  <title>Project summary</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <style>
+    .success {
+      color: #4F8A10;
+    }
+
+    .error {
+      color: #D8000C;
+    }
+
+    .warning {
+      color: #9F6000;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Filepack</h1>
+  <% if (filepack) { %>
+  <p><a href="<%= filepack %>">Download</a></p>
+
+  <div>
+    Link to copy:
+
+    <pre>
+        <code class="urlify click-select"><%= filepack %></code>
+      </pre>
+  </div>
+  <% } else { %>
+  <p>Filepack is missing.</p>
+  <% } %>
+
+  <h1>Links</h1>
+  <% if (pages.length) { %>
+  <table>
+    <tbody>
+    <% for (let page of pages) { %>
+    <tr><td><a href="<%= page %>" class="urlify" target="_blank"><%= page %></a></td></tr>
+    <% } %>
+    </tbody>
+  </table>
+  <% } else { %>
+  <p>There are no pages.</p>
+  <% } %>
+
+  <h1>Code style</h1>
+
+  <h2>JS</h2>
+  <% if (false === jsErrors) { %>
+  <p class="error">Report file missing.</p>
+  <% } else if (true === jsErrors) { %>
+  <p class="success">All clear.</p>
+  <% } else { %>
+  <p>
+    <span class="error">Errors: <%= jsErrors.errors %></span><br>
+    <span class="warning">Warnings: <%= jsErrors.warnings %></span>
+  </p>
+  <% } %>
+
+  <h2>CSS</h2>
+  <% if (false === cssErrors) { %>
+  <p class="error">Report file missing.</p>
+  <% } else if (0 === cssErrors) { %>
+  <p class="success">All clear.</p>
+  <% } else { %>
+  <p class="error">Issues: <%= cssErrors %></p>
+  <% } %>
+
+</div>
+
+<script type="text/javascript">
+  (function() {
+    let url = window.location.href.replace(/[^/]+$/, '');
+
+    // Turn all relative URLs to absolute
+    let urlify = document.getElementsByClassName('urlify');
+    for (let element of urlify) {
+      element.innerHTML = url + element.innerHTML;
+    }
+
+    // Elements that are selectable on click
+    let clickselect = document.getElementsByClassName('click-select');
+    for (let element of clickselect) {
+      element.addEventListener('click', () => {
+        let selection = window.getSelection();
+        let range = document.createRange();
+        range.selectNodeContents(element);
+        selection.removeAllRanges();
+        selection.addRange(range);
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+//
+// ----------------------------------------
+// TYPOGRAPHY
+//
+// Beware using global styles!
+// http://cssspecificity.com/
+//
+
+a {
+	color: inherit;
+	@include transition(color);
+	text-decoration: none; }

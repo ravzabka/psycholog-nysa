@@ -1,0 +1,21 @@
+<project name="test-chopstart" default="build">
+  <target name="install">
+    <echo>Installing...</echo>
+    <parallel>
+      <exec executable="npm" failonerror="true">
+        <arg value="-s" />
+        <arg value="install" />
+      </exec>
+    </parallel>
+    <echo>Installing... Done</echo>
+  </target>
+
+  <target name="build" depends="install">
+    <echo>Building project...</echo>
+    <exec executable="npm" failonerror="true">
+      <arg value="run" />
+      <arg value="build" />
+    </exec>
+    <echo>Building... Done</echo>
+  </target>
+</project>

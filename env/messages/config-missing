@@ -1,0 +1,16 @@
+[red] Error!
+Configuration files are missing!
+
+The environment requires following configuration files:
+config/project.json
+package.json
+
+Optionally:
+config/local.json - for local development.
+
+And in case of WordPress project:
+.env
+composer.json
+
+Some of them are missing. Try running "node setup" - it should
+generate all missing files for you!

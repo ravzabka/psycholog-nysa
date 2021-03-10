@@ -1,0 +1,40 @@
+//
+// ----------------------------------------
+// ADDITIONAL CSS RESET
+//
+// Basically we use normalize.css to reset styles
+// You can find it on __vendors/_normalize.scss
+// Here we add some additional reset of CSS
+//
+
+*, *:before, *:after { box-sizing: border-box; }
+
+ul {
+	margin: 0;
+	padding: 0;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+	-webkit-padding-start: 0; }
+
+li { list-style-type: none; }
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0; }
+
+iframe, button { border: none; }
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+	-webkit-padding-before: 0;
+	-webkit-padding-start: 0;
+	-webkit-padding-end: 0;
+	-webkit-padding-after: 0;
+	min-width: auto; }

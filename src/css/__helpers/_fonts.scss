@@ -1,0 +1,33 @@
+//
+// ----------------------------------------
+// FONTS
+//
+// We have X fonts in the project:
+// - ___ (weight: __)
+// - ___ (weight: __)
+//
+
+$font--headline: 'Cambria', sans-serif;
+$font--text: 'lato', sans-serif;
+$font--signature:  'Dancing Script', cursive;
+
+
+//
+// ----------------------------------------
+// FONTS SOURCE
+
+/*@font-face {
+  font-family: 'Eurostile'; 
+  src: url('../fonts/eurostile.woff') format('woff'), 
+     
+}
+*/
+
+@import url("https://use.typekit.net/deb6hzy.css");
+@import url('https://fonts.googleapis.com/css?family=Lato');
+// @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+// Insert @font-face here. If you want to load Google fonts, you can paste here just:
+//
+// > @import url('https://fonts.googleapis.com/css?family=Lato');

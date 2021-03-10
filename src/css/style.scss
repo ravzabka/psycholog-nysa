@@ -1,0 +1,43 @@
+@charset 'utf-8';
+
+// ----------------------------------------
+//         STYLES COMPILED WITH SASS
+//      Naming conceptions of the files:
+//            BEM CSS METHODOLOGY:
+//            http://en.bem.info/
+// ----------------------------------------
+//
+// @devs:
+// 		Please keep current comments convention
+// 		/* CSS comments */ only for clients
+//
+
+// -------------------------------- Vendors
+@import '__vendors/normalize';
+@import '__vendors/include-media';
+@import '__vendors/slick';
+@import '__vendors/slick-theme';
+@import '__vendors/square1';
+
+// -------------------------------- Helpers
+@import '__helpers/fonts';
+@import '__helpers/colors';
+@import '__helpers/mixins';
+@import '__helpers/reset';
+@import '__helpers/breakpoints';
+@import '__helpers/general';
+@import '__helpers/typography';
+
+// ----------------------------- Components
+
+@import '__components/box';
+@import '__components/border';
+@import '__components/button';
+@import '__components/header';
+@import '__components/footer';
+@import '__components/title';
+@import '__components/list-unordered';
+@import '__components/navigation';
+@import '__components/slideshow';
+
+
